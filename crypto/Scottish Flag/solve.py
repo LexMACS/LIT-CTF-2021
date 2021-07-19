@@ -1,0 +1,24 @@
+import random
+import binascii
+import math
+import sympy
+
+
+def getCoords(a0, d1, d2, d3):
+    s4 = d1 + d2 - d3
+    s1 = d1
+    sqdif = s4-s1
+    dif = sqdif//a0
+    xcord = (dif + a0)//2
+    print(s4-xcord*xcord);
+    ycord = math.isqrt(s4-xcord*xcord)
+
+    return [ycord,xcord]
+
+a0 = 1000000000000000000
+d1 = 11167218166350596634324970518743041384610511755703179147618262518561344714067317278672955466
+d2 = 11167218166350596634324970522379402989880404344356627706412007661522873314144716029510966061
+d3 = 11167218166350596634324970517500867796567936885101366588743135261789294824144716029510966061
+
+x,y = getCoords(a0,d1,d2,d3);
+print(bytes.fromhex(hex(x)[2:]) + bytes.fromhex(hex(y)[2:]));
