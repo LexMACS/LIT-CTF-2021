@@ -1,0 +1,1 @@
+gcc -o rollmyown3 -pie -fstack-protector -Wl,-z,relro,-z,now -s rollmyown3.c -lseccomp -lcrypto

@@ -1,0 +1,1 @@
+patchelf --set-interpreter ./ld-2.27.so --add-needed ./libc-2.27.so ./deepspacewaifu
